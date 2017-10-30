@@ -1,0 +1,76 @@
+
+body { 
+  padding-top: 40px; 
+  background-color: #E5E5FF
+}
+@media screen and (max-width: 768px) {
+    body { 
+      padding-top: 40px; 
+      background-color: #E5E5FF
+      }
+}
+
+.sidebar-module {
+  padding-top: 16px;
+}
+.testing {
+  background: green;
+
+}
+
+.img-fluid {
+  max-width: 60%;
+}
+
+#myDiagramDiv{
+  height: 50vh
+}
+
+#success_message{ display: none;}
+
+#holder {
+  width: 1200px
+}
+
+#move {
+  float: right;
+  width: 40%;
+  height: 40%
+}
+
+#flowchart {
+  float: left;
+ 
+}
+
+#menu {
+  clear: left;
+  width: 480px
+}
+
+#textboxes {
+  clear: left;
+  position: relative;
+  width: 400px
+}
+
+#textBoxDesc {
+  width: 400px;
+  font-weight: bold
+}
+
+#moveTips {
+  width: 720px;
+  white-space: pre-wrap
+}
+
+#moveDesc {
+  width: 720px;
+  white-space: pre-wrap
+}
+
+#holder {
+  font-family: Courier,monospace;
+  font-size: 14px
+}
+
