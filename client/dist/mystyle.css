@@ -22,9 +22,7 @@ body {
   max-width: 60%;
 }
 
-#myDiagramDiv{
-  height: 50vh
-}
+
 
 #success_message{ display: none;}
 
@@ -39,14 +37,13 @@ body {
 }
 
 #flowchart {
-  float: left;
+  height: 100%
  
 }
-
-#menu {
-  clear: left;
-  width: 480px
+#myDiagramDiv{
+  height: 50vh
 }
+
 
 #textboxes {
   clear: left;

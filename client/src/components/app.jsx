@@ -17,9 +17,9 @@ class App extends React.Component {
     this.imgChange = this.imgChange.bind(this);
   }
 
-  imgChange(){
+  imgChange(val){
     //set the value key of this.state to new value
-    this.setState({value: $("#menu").val()});
+    this.setState({value: val});
     console.log('imgChange is invoked, state.value = ', this.state.value)
   }
 
@@ -27,10 +27,9 @@ class App extends React.Component {
     return (
       <div id='holder'>
         <Header />
-        <Flowchart />
+        <Flowchart imgChange={this.imgChange}/>
         <img id='move' src={moves[this.state.value]['url']}/>
         <hr/>
-        <Menu id='menu' moves={moves} imgChange={this.imgChange}/>
         <pre id='moveDesc'>{moves[this.state.value]['description']}</pre>
         <pre id='moveTips'>{moves[this.state.value]['tips']}</pre>
       </div>

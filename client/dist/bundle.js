@@ -975,13 +975,12 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
+// console.log('This is the client index page!')
+
 // var ReactDOM = require('react-dom');
-console.log('This is the client index page!');
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 // var App = require('./components/App');
 // var React = require('react');
-
-
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 
 /***/ }),
 /* 16 */
@@ -21211,11 +21210,11 @@ var _Menu = __webpack_require__(35);
 
 var _Menu2 = _interopRequireDefault(_Menu);
 
-var _Flowchart = __webpack_require__(37);
+var _Flowchart = __webpack_require__(36);
 
 var _Flowchart2 = _interopRequireDefault(_Flowchart);
 
-var _moves = __webpack_require__(36);
+var _moves = __webpack_require__(37);
 
 var _moves2 = _interopRequireDefault(_moves);
 
@@ -21245,9 +21244,9 @@ var App = function (_React$Component) {
 
   _createClass(App, [{
     key: 'imgChange',
-    value: function imgChange() {
+    value: function imgChange(val) {
       //set the value key of this.state to new value
-      this.setState({ value: $("#menu").val() });
+      this.setState({ value: val });
       console.log('imgChange is invoked, state.value = ', this.state.value);
     }
   }, {
@@ -21257,10 +21256,9 @@ var App = function (_React$Component) {
         'div',
         { id: 'holder' },
         _react2.default.createElement(_Header2.default, null),
-        _react2.default.createElement(_Flowchart2.default, null),
+        _react2.default.createElement(_Flowchart2.default, { imgChange: this.imgChange }),
         _react2.default.createElement('img', { id: 'move', src: _moves2.default[this.state.value]['url'] }),
         _react2.default.createElement('hr', null),
-        _react2.default.createElement(_Menu2.default, { id: 'menu', moves: _moves2.default, imgChange: this.imgChange }),
         _react2.default.createElement(
           'pre',
           { id: 'moveDesc' },
@@ -22933,13 +22931,11 @@ var Menu = function (_React$Component) {
         null,
         _react2.default.createElement(
           'select',
-          { id: 'menu', defaultValue: '0', onChange: function onChange() {
-              return _this2.props.imgChange();
-            } },
+          { id: 'menu', defaultValue: '0' },
           this.props.moves.map(function (item) {
             return _react2.default.createElement(
               'option',
-              { key: item.name, value: item.id },
+              { key: item.name, value: item.id, onSelect: _this2.props.imgChange.bind(null, item.id) },
               item.name
             );
           })
@@ -22955,12 +22951,6 @@ exports.default = Menu;
 
 /***/ }),
 /* 36 */
-/***/ (function(module, exports) {
-
-module.exports = [{"id":0,"name":"0. Welcome! Pick a different move to show here ...","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MSVlGUC11TWxNUDg","description":"Welcome to Tango for Dummies!","tips":"Use the drop-down menu to navigate."},{"id":1,"name":"1. Weight change","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MckpnZmlDdk1kZ1k","description":"This is known as the zeroth pattern for tango.  Leaders, come back to here if you mess up another move, feel out of sync with your follower, or need a second to think about paying your credit card debt.","tips":"Tips for leaders: \n \nRemember that your weight change's goal is to induce the follower's weight change, so you may have to make the shift bigger or smaller depending on your follower.  \n*ADVANCED* A follower's weight change actually has a 'shape', which is 'flat' as long as there is some weight on both of follower's feet.  As soon as all the weight is on only one of follower's foot, there is a very slight 'dip', which is your cue to weight change to other direction or start walking.  \n \nTips for followers: \n \nKeep your heels as close as possible! The reason for this is you want to stay as tall as possible during weight changes; height change is actually an effective technique to convey intention to your tango partner. To be honest though, I keep my heels together for weight changes just because it looks better 😀"},{"id":2,"name":"2. Parellel walking","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MNWVFTTRrb282QVU","description":"Beautiful walking is beautiful tango.  Remember that.  ","tips":"Tips for leaders: \n \nMove from your center! Imagine you're pulling a person tied to your waist.  Actually, stop imagining this and try this out! Use a bath towel (or a beat-up jacket) to hack a makeshift towing waist harness, and ask one of your minion friends to hold the ends of the towel and stand still two feet behind you.  Try to tow your friend in a smooth manner.  This is the feeling for a great walking lead.  \n*ADVANCED* Try moving your free foot a split second after the followers does.  \n \nTips for followers: \n \nI believe that it is mostly the follower's responsibility to let your leader know 'where you are', so please provide a little bit extra pressure when the leader is walking forward; this will also make you more stable.  \n*ADVANCED* If you wear high heels during dancing, get a more experienced follower to show you how to land on your whole foot, instead of landing on just the ball of your foot.  This is the trick to be able to dance all night.  "},{"id":3,"name":"3. Cross walking","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MSUxzaWdFbjNITjg","description":"Cross system walking in a tango specialty.  Unless you're an ice-skater.  ","tips":"Tips for leaders: \n \nTry to point your chest at your follower always.  *ADVANCED* There is an inline/inside version of cross walking that is harder than two shown; I only use it to set up reverse sandwich parada though.  \n \nTips for followers: prepare a well-written speech for when your leader accidentally step on you 😒.  "},{"id":4,"name":"4. Cruzada","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MOWRGWDNRVW90aVU","description":"I don't know why, but the basic 8-count way to lead into a 'cross'/cruzada is not basic at all.  Practice!  ","tips":"Tips for leaders: \n \nAn ocho cortado is a much more intuitive way to lead into 'cross' in my opinion.  For the 8-count basic way, remember that you are still walking straight forward but utilizing you chest rotation (dissociation) to bring the follower back in front of you at the end of the 'cross.  \n \nTips for followers: for the 8-count basic way, take a larger step right before the 'cross' happens, to create more room for the 'cross'.  It is tricky to figure out if you should weight-transfer to your front foot after the 'cross', in most cases it's safer to transfer right away.  "},{"id":5,"name":"5. Gancho","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MbWNwcjhFX00wUlE","description":"A gancho puts the mingle into tango.  *NOTE* In my flowchart, I only have gancho right after a parada pasada because it is the easiest and safest gancho that I know. ","tips":"Tips for leaders: \n \ntry to have as little weight as possible on your 'hooking' leg; you may need to bend your standing leg (for shorter follower) or raise the 'hooking leg (for much taller follower).  \n \nTips for followers: \n \nPlease swing your whole leg instead of just your calf; leaders don't wear groin protectors to tango.  "},{"id":6,"name":"6. Parada pasada","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MTlBKR2dsZmdaS3M","description":"This is usually the first fun move you'll learn.  So have fun with it!  ","tips":"Tips for leaders: \n \nMake sure the follower knows your foot obstacle is there, by physical contact, not by psychic connection. \n \nTips for followers: \n \nI believe that followers should get to play here for a few seonds, unless it creates a traffic jam, in which case, make sure to look extra gud cuz' people watchin'.  "},{"id":7,"name":"7. Ocho","url":"http://www.virtuar.com/tango/theory/2014/20141008_focho4_sm.png","description":"The famous figure-8 core exercise.  ","tips":"Tips for leaders: \n \nUse your spine, not your arms, to make ochos happen.  A ocho led entirely by arms is known as an 'oucho'.  \n \nTips for followers: \n \nfor forward ochos, utilize the 'unwinding' of your core to pivot easier; for back ochos, use both your own core and your leader for pivoting.  "},{"id":8,"name":"8. Giro/Molinete","url":"https://s-media-cache-ak0.pinimg.com/originals/8f/71/10/8f71102accf5e6eff2cfc67c81d122b1.gif","description":"As my mom puts it, 'the only thing I know about tango is that you do a lot of turns and spins.  ","tips":"Tips for leaders: \n \nengage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers: as a leader, I subconciously distinguish intermediate followers from beginner followers by the quality of the follower's giro/molinete; that is becaue giros/molinetes are difficult.  There are three important points (don't rush, take long steps, and be consistent).  Practice with chair.  For the close embrace version, replace the back step with a back cross, and, optionally, replace the forward step with a front cross.  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight).  "},{"id":9,"name":"9. Rock Step Turn","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MRjFZOEllTzZqOUk","description":"Counter-clockwise rock step turns are really simple; I've led first-day followers to do this successfully.  ","tips":"Tips for leaders: \n \nfor the rock step, take a smaller step than you think you need.  In fact, the smaller the rock step, the more turn you can get out of it. \n \nTips for followers:\n \nthink of rock steps as a dynamic weight change, so take your time.  "}]
-
-/***/ }),
-/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23004,19 +22994,19 @@ var Flowchart = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'myDiagramDiv' },
-        _react2.default.createElement('img', { id: 'flowchart', src: 'https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MZGFQeUlMVHpsNVk', usemap: '#image-map' }),
+        _react2.default.createElement('img', { id: 'flowchart', src: 'https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MZGFQeUlMVHpsNVk', useMap: '#image-map' }),
         _react2.default.createElement(
           'map',
           { name: 'image-map' },
-          _react2.default.createElement('area', { target: '_blank', alt: 'cruzada', title: 'cruzada', href: '/crusada', coords: '443,229,546,182', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'parada', title: 'parada', href: '/parada', coords: '515,279,672,324', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'giro', title: 'giro', href: '/giro', coords: '459,436,619,482', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'gancho', title: 'gancho', href: '/gancho', coords: '313,279,415,325', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'ocho', title: 'ocho', href: '/ocho', coords: '832,360,911,404', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'rockturn', title: 'rockturn', href: '/rockturn', coords: '439,514,601,560', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'weightchange', title: 'weightchange', href: '/weightchange', coords: '409,1,643,48', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'parallelwalking', title: 'parallelwalking', href: '/parallelwalking', coords: '12,91,236,137', shape: 'rect' }),
-          _react2.default.createElement('area', { target: '_blank', alt: 'crosswalking', title: 'crosswalking', href: '/crosswalking', coords: '739,86,949,131', shape: 'rect' })
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 1), alt: 'weightchange', title: 'weightchange', coords: '409,1,643,48', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 4), alt: 'cruzada', title: 'cruzada', coords: '443,229,546,182', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 6), alt: 'parada', title: 'parada', coords: '515,279,672,324', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 8), alt: 'giro', title: 'giro', coords: '459,436,619,482', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 5), alt: 'gancho', title: 'gancho', coords: '313,279,415,325', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 7), alt: 'ocho', title: 'ocho', coords: '832,360,911,404', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 9), alt: 'rockturn', title: 'rockturn', coords: '439,514,601,560', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 2), alt: 'parallelwalking', title: 'parallelwalking', coords: '12,91,236,137', shape: 'rect' }),
+          _react2.default.createElement('area', { onClick: this.props.imgChange.bind(null, 3), alt: 'crosswalking', title: 'crosswalking', coords: '739,86,949,131', shape: 'rect' })
         )
       );
     }
@@ -23026,6 +23016,12 @@ var Flowchart = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Flowchart;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+module.exports = [{"id":0,"name":"0. Welcome! Pick a different move to show here ...","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MSVlGUC11TWxNUDg","description":"Welcome to Tango for Dummies!","tips":"Use the drop-down menu to navigate."},{"id":1,"name":"1. Weight change","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MckpnZmlDdk1kZ1k","description":"This is known as the zeroth pattern for tango.  Leaders, come back to here if you mess up another move, feel out of sync with your follower, or need a second to think about paying your credit card debt.","tips":"Tips for leaders: \n \nRemember that your weight change's goal is to induce the follower's weight change, so you may have to make the shift bigger or smaller depending on your follower.  \n*ADVANCED* A follower's weight change actually has a 'shape', which is 'flat' as long as there is some weight on both of follower's feet.  As soon as all the weight is on only one of follower's foot, there is a very slight 'dip', which is your cue to weight change to other direction or start walking.  \n \nTips for followers: \n \nKeep your heels as close as possible! The reason for this is you want to stay as tall as possible during weight changes; height change is actually an effective technique to convey intention to your tango partner. To be honest though, I keep my heels together for weight changes just because it looks better 😀"},{"id":2,"name":"2. Parellel walking","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MNWVFTTRrb282QVU","description":"Beautiful walking is beautiful tango.  Remember that.  ","tips":"Tips for leaders: \n \nMove from your center! Imagine you're pulling a person tied to your waist.  Actually, stop imagining this and try this out! Use a bath towel (or a beat-up jacket) to hack a makeshift towing waist harness, and ask one of your minion friends to hold the ends of the towel and stand still two feet behind you.  Try to tow your friend in a smooth manner.  This is the feeling for a great walking lead.  \n*ADVANCED* Try moving your free foot a split second after the followers does.  \n \nTips for followers: \n \nI believe that it is mostly the follower's responsibility to let your leader know 'where you are', so please provide a little bit extra pressure when the leader is walking forward; this will also make you more stable.  \n*ADVANCED* If you wear high heels during dancing, get a more experienced follower to show you how to land on your whole foot, instead of landing on just the ball of your foot.  This is the trick to be able to dance all night.  "},{"id":3,"name":"3. Cross walking","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MSUxzaWdFbjNITjg","description":"Cross system walking in a tango specialty.  Unless you're an ice-skater.  ","tips":"Tips for leaders: \n \nTry to point your chest at your follower always.  *ADVANCED* There is an inline/inside version of cross walking that is harder than two shown; I only use it to set up reverse sandwich parada though.  \n \nTips for followers: prepare a well-written speech for when your leader accidentally step on you 😒.  "},{"id":4,"name":"4. Cruzada","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MOWRGWDNRVW90aVU","description":"I don't know why, but the basic 8-count way to lead into a 'cross'/cruzada is not basic at all.  Practice!  ","tips":"Tips for leaders: \n \nAn ocho cortado is a much more intuitive way to lead into 'cross' in my opinion.  For the 8-count basic way, remember that you are still walking straight forward but utilizing you chest rotation (dissociation) to bring the follower back in front of you at the end of the 'cross.  \n \nTips for followers: for the 8-count basic way, take a larger step right before the 'cross' happens, to create more room for the 'cross'.  It is tricky to figure out if you should weight-transfer to your front foot after the 'cross', in most cases it's safer to transfer right away.  "},{"id":5,"name":"5. Gancho","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MbWNwcjhFX00wUlE","description":"A gancho puts the mingle into tango.  *NOTE* In my flowchart, I only have gancho right after a parada pasada because it is the easiest and safest gancho that I know. ","tips":"Tips for leaders: \n \ntry to have as little weight as possible on your 'hooking' leg; you may need to bend your standing leg (for shorter follower) or raise the 'hooking leg (for much taller follower).  \n \nTips for followers: \n \nPlease swing your whole leg instead of just your calf; leaders don't wear groin protectors to tango.  "},{"id":6,"name":"6. Parada pasada","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MTlBKR2dsZmdaS3M","description":"This is usually the first fun move you'll learn.  So have fun with it!  ","tips":"Tips for leaders: \n \nMake sure the follower knows your foot obstacle is there, by physical contact, not by psychic connection. \n \nTips for followers: \n \nI believe that followers should get to play here for a few seonds, unless it creates a traffic jam, in which case, make sure to look extra gud cuz' people watchin'.  "},{"id":7,"name":"7. Ocho","url":"http://www.virtuar.com/tango/theory/2014/20141008_focho4_sm.png","description":"The famous figure-8 core exercise.  ","tips":"Tips for leaders: \n \nUse your spine, not your arms, to make ochos happen.  A ocho led entirely by arms is known as an 'oucho'.  \n \nTips for followers: \n \nfor forward ochos, utilize the 'unwinding' of your core to pivot easier; for back ochos, use both your own core and your leader for pivoting.  "},{"id":8,"name":"8. Giro/Molinete","url":"https://s-media-cache-ak0.pinimg.com/originals/8f/71/10/8f71102accf5e6eff2cfc67c81d122b1.gif","description":"As my mom puts it, 'the only thing I know about tango is that you do a lot of turns and spins.  ","tips":"Tips for leaders: \n \nengage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers: as a leader, I subconciously distinguish intermediate followers from beginner followers by the quality of the follower's giro/molinete; that is becaue giros/molinetes are difficult.  There are three important points (don't rush, take long steps, and be consistent).  Practice with chair.  For the close embrace version, replace the back step with a back cross, and, optionally, replace the forward step with a front cross.  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight).  "},{"id":9,"name":"9. Rock Step Turn","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MRjFZOEllTzZqOUk","description":"Counter-clockwise rock step turns are really simple; I've led first-day followers to do this successfully.  ","tips":"Tips for leaders: \n \nfor the rock step, take a smaller step than you think you need.  In fact, the smaller the rock step, the more turn you can get out of it. \n \nTips for followers:\n \nthink of rock steps as a dynamic weight change, so take your time.  "}]
 
 /***/ })
 /******/ ]);

@@ -5,6 +5,6 @@ import ReactDOM from 'react-dom';
 // var App = require('./components/App');
 import App from './components/App';
 
-console.log('This is the client index page!')
+// console.log('This is the client index page!')
 
 ReactDOM.render(<App/>, document.getElementById('app'));
