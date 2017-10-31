@@ -1,24 +1,32 @@
+::-webkit-scrollbar { 
+  display: none; 
+}
 
 body { 
   background-color: #E5E5FF
+}
+
+#navbar1 {
+  margin-bottom: 2vh
 }
 
 #flowchart {
   width: 100%
  
 }
-/* #myDiagramDiv{
-  height: 50vh
-} */
+#texts {
+  margin-top: 2vh
+}
 
-#moveTips {
-  width: 720px;
+
+#right, #move {
+  max-height: 50vh
+}
+
+
+#moveTips, #moveDesc {
   white-space: pre-wrap
 }
 
-#moveDesc {
-  width: 720px;
-  white-space: pre-wrap
-}
 
 

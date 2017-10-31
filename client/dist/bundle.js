@@ -21254,30 +21254,34 @@ var App = function (_React$Component) {
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
           'div',
-          { className: 'row' },
+          { className: 'row', id: 'left-right' },
           _react2.default.createElement(
             'div',
-            { className: 'col-xs-12 col-sm-8' },
+            { className: 'col-xs-12 col-sm-8', id: 'left' },
             _react2.default.createElement(_Flowchart2.default, { imgChange: this.imgChange })
           ),
           _react2.default.createElement(
             'div',
-            { className: 'col-xs-12 col-md-4' },
-            _react2.default.createElement('img', { id: 'move', src: _moves2.default[this.state.value]['url'] })
+            { className: 'col-xs-12 col-md-4', id: 'right' },
+            _react2.default.createElement('img', { id: 'move', src: _moves2.default[this.state.value]['url'], className: 'img-responsive' })
           )
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-xs-12' },
+          { className: 'row', id: 'texts' },
           _react2.default.createElement(
-            'pre',
-            { id: 'moveDesc' },
-            _moves2.default[this.state.value]['description']
-          ),
-          _react2.default.createElement(
-            'pre',
-            { id: 'moveTips' },
-            _moves2.default[this.state.value]['tips']
+            'div',
+            { className: 'col-xs-12' },
+            _react2.default.createElement(
+              'pre',
+              { id: 'moveDesc' },
+              _moves2.default[this.state.value]['description']
+            ),
+            _react2.default.createElement(
+              'pre',
+              { id: 'moveTips' },
+              _moves2.default[this.state.value]['tips']
+            )
           )
         )
       );
@@ -22879,102 +22883,102 @@ var Header = function (_React$Component) {
   }
 
   _createClass(Header, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "nav",
-        { className: "navbar navbar-inverse" },
+        'nav',
+        { className: 'navbar navbar-inverse', id: 'navbar1' },
         _react2.default.createElement(
-          "div",
-          { className: "navbar-header" },
+          'div',
+          { className: 'navbar-header' },
           _react2.default.createElement(
-            "button",
-            { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
+            'button',
+            { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#navbar', 'aria-expanded': 'false', 'aria-controls': 'navbar' },
             _react2.default.createElement(
-              "span",
-              { className: "sr-only" },
-              "Toggle navigation"
+              'span',
+              { className: 'sr-only' },
+              'Toggle navigation'
             ),
-            _react2.default.createElement("span", { className: "icon-bar" }),
-            _react2.default.createElement("span", { className: "icon-bar" }),
-            _react2.default.createElement("span", { className: "icon-bar" })
+            _react2.default.createElement('span', { className: 'icon-bar' }),
+            _react2.default.createElement('span', { className: 'icon-bar' }),
+            _react2.default.createElement('span', { className: 'icon-bar' })
           ),
           _react2.default.createElement(
-            "a",
-            { className: "navbar-brand" },
-            "Tango for Dummies"
+            'a',
+            { className: 'navbar-brand' },
+            'Tango for Dummies'
           )
         ),
         _react2.default.createElement(
-          "div",
-          { id: "navbar", className: "navbar-collapse collapse" },
+          'div',
+          { id: 'navbar', className: 'navbar-collapse collapse' },
           _react2.default.createElement(
-            "ul",
-            { className: "nav navbar-nav" },
+            'ul',
+            { className: 'nav navbar-nav' },
             _react2.default.createElement(
-              "li",
-              { className: "active" },
+              'li',
+              { className: 'active' },
               _react2.default.createElement(
-                "a",
-                { href: ".." },
-                "Home"
+                'a',
+                { href: '..' },
+                'Home'
               )
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
               _react2.default.createElement(
-                "a",
-                { href: "about" },
-                "About"
+                'a',
+                { href: 'about' },
+                'About'
               )
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
               _react2.default.createElement(
-                "a",
-                { href: "contact" },
-                "Contact"
+                'a',
+                { href: 'contact' },
+                'Contact'
               )
             ),
             _react2.default.createElement(
-              "li",
-              { className: "dropdown" },
+              'li',
+              { className: 'dropdown' },
               _react2.default.createElement(
-                "a",
-                { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
-                "Useful Info",
-                _react2.default.createElement("span", { className: "caret" })
+                'a',
+                { href: '#', className: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false' },
+                'Useful Info',
+                _react2.default.createElement('span', { className: 'caret' })
               ),
               _react2.default.createElement(
-                "ul",
-                { className: "dropdown-menu" },
+                'ul',
+                { className: 'dropdown-menu' },
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "flowchart" },
-                    "Tango Flowchart"
+                    'a',
+                    { href: 'flowchart' },
+                    'Tango Flowchart'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "leaders-starter" },
-                    "Leaders' Starter Guide"
+                    'a',
+                    { href: 'leaders-starter' },
+                    'Leaders\' Starter Guide'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   null,
                   _react2.default.createElement(
-                    "a",
-                    { href: "followers-starter" },
-                    "Followers' Starter Guide"
+                    'a',
+                    { href: 'followers-starter' },
+                    'Followers\' Starter Guide'
                   )
                 )
               )
