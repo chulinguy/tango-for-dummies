@@ -3,7 +3,6 @@ import React from 'react';
 import _ from 'underscore';
 
 import Header from './Header.jsx';
-import Menu from './Menu.jsx'; 
 import Flowchart from "./Flowchart.jsx";
 import moves from './moves.json';
 
@@ -25,13 +24,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='holder'>
+      <div className='container-fluid'>
         <Header />
-        <Flowchart imgChange={this.imgChange}/>
-        <img id='move' src={moves[this.state.value]['url']}/>
-        <hr/>
-        <pre id='moveDesc'>{moves[this.state.value]['description']}</pre>
-        <pre id='moveTips'>{moves[this.state.value]['tips']}</pre>
+        <div className='row'>
+          <div className='col-xs-12 col-sm-8'>
+            <Flowchart imgChange={this.imgChange}/>
+          </div>
+          <div className='col-xs-12 col-md-4'>
+            <img id='move' src={moves[this.state.value]['url']}/>
+          </div>
+        </div>
+        <div className='col-xs-12'>
+          <pre id='moveDesc'>{moves[this.state.value]['description']}</pre>
+          <pre id='moveTips'>{moves[this.state.value]['tips']}</pre>
+        </div>
       </div>
     )
   }

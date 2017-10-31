@@ -1,60 +1,15 @@
 
 body { 
-  padding-top: 40px; 
   background-color: #E5E5FF
-}
-@media screen and (max-width: 768px) {
-    body { 
-      padding-top: 40px; 
-      background-color: #E5E5FF
-      }
-}
-
-.sidebar-module {
-  padding-top: 16px;
-}
-.testing {
-  background: green;
-
-}
-
-.img-fluid {
-  max-width: 60%;
-}
-
-
-
-#success_message{ display: none;}
-
-#holder {
-  width: 1200px
-}
-
-#move {
-  float: right;
-  width: 40%;
-  height: 40%
 }
 
 #flowchart {
-  height: 100%
+  width: 100%
  
 }
-#myDiagramDiv{
+/* #myDiagramDiv{
   height: 50vh
-}
-
-
-#textboxes {
-  clear: left;
-  position: relative;
-  width: 400px
-}
-
-#textBoxDesc {
-  width: 400px;
-  font-weight: bold
-}
+} */
 
 #moveTips {
   width: 720px;
@@ -66,8 +21,4 @@ body {
   white-space: pre-wrap
 }
 
-#holder {
-  font-family: Courier,monospace;
-  font-size: 14px
-}
 
