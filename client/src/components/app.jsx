@@ -1,6 +1,6 @@
-//import Go from 'gojs';
 import React from 'react';
-import _ from 'underscore';
+import ReactHover from 'react-hover';
+// import _ from 'underscore';
 
 import Header from './Header.jsx';
 import Flowchart from "./Flowchart.jsx";
@@ -17,9 +17,8 @@ class App extends React.Component {
   }
 
   imgChange(val){
-    //set the value key of this.state to new value
     this.setState({value: val});
-    console.log('imgChange is invoked, state.value = ', this.state.value)
+    // console.log('imgChange is invoked, state.value = ', this.state.value)
   }
 
   render() {
@@ -28,7 +27,9 @@ class App extends React.Component {
         <Header />
         <div className='row' id='left-right'>
           <div className='col-xs-12 col-sm-8' id='left'>
-            <Flowchart imgChange={this.imgChange}/>
+            <Flowchart 
+              imgChange={this.imgChange}
+            />
           </div>
           <div className='col-xs-12 col-md-4' id='right'>
             <img id='move' src={moves[this.state.value]['url']} className='img-responsive'/>
@@ -36,7 +37,6 @@ class App extends React.Component {
         </div>
         <div className='row' id='texts'>
           <div className='col-xs-12'>
-            <pre id='moveDesc'>{moves[this.state.value]['description']}</pre>
             <pre id='moveTips'>{moves[this.state.value]['tips']}</pre>
           </div>
         </div>
