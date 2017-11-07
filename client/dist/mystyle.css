@@ -6,8 +6,17 @@ body {
   background-color: #E5E5FF
 }
 
+pre {
+  margin-bottom: 1vh
+}
+
+.hover-div {
+  background-color: lightgreen;
+  z-index: 50
+}
+
 #navbar1 {
-  margin-bottom: 2vh
+  margin-bottom: 1vh
 }
 
 #flowchart {
@@ -15,12 +24,13 @@ body {
  
 }
 #texts {
-  margin-top: 2vh
+  margin-top: 1vh
 }
 
 
 #right, #move {
-  max-height: 50vh
+  max-height: 50vh;
+  z-index: 10
 }
 
 

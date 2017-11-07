@@ -5,7 +5,7 @@ import ReactHover from 'react-hover';
 const options = {
   followCursor:true,
   shiftX: 20,
-  shiftY: 0
+  shiftY: -75
 }
 
 class ImageMapHover extends React.Component {
@@ -25,7 +25,7 @@ class ImageMapHover extends React.Component {
         coords={this.props.coords} shape="rect"/>
       </ReactHover.Trigger>
       <ReactHover.Hover type='hover'>
-        <div> {moves[this.props.number]['description']} </div>
+        <div className='hover-div'> {moves[this.props.number]['description']} </div>
       </ReactHover.Hover>
     </ReactHover>
     )}
