@@ -25,15 +25,20 @@ class App extends React.Component {
     return (
       <div className='container-fluid' id='big-container'>
         <Header />
-          <div className='BS col-xs-12 col-sm-8' id='left'>
-            <Flowchart 
-              imgChange={this.imgChange}
-            />
+          <div className='row-above'>
+            <div className='BS col-xs-12 col-sm-8' id='left'>
+              <Flowchart 
+                imgChange={this.imgChange}
+              />
+            </div>
+            <div className='BS col-xs-6 col-sm-4' id='right' 
+            style={{backgroundImage: `url(${moves[this.state.value]['url']})`,
+                    backgroundRepeat:"no-repeat",
+                    backgroundSize:"contain" }}>
+              {/* <img id='move' src={moves[0]['url']} className='img-responsive'/> */}
+            </div>
           </div>
-          <div className='BS col-xs-6 col-md-4' id='right'>
-            <img id='move' src={moves[this.state.value]['url']} className='img-responsive'/>
-          </div>
-          <div className='BS col-xs-6 col-md-12'>
+          <div className='BS col-xs-6 col-sm-12'>
             <pre id='moveTips'>{moves[this.state.value]['tips']}</pre>
           </div>
       </div>

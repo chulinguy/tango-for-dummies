@@ -21279,19 +21279,22 @@ var App = function (_React$Component) {
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
           'div',
-          { className: 'BS col-xs-12 col-sm-8', id: 'left' },
-          _react2.default.createElement(_Flowchart2.default, {
-            imgChange: this.imgChange
-          })
+          { className: 'row-above' },
+          _react2.default.createElement(
+            'div',
+            { className: 'BS col-xs-12 col-sm-8', id: 'left' },
+            _react2.default.createElement(_Flowchart2.default, {
+              imgChange: this.imgChange
+            })
+          ),
+          _react2.default.createElement('div', { className: 'BS col-xs-6 col-sm-4', id: 'right',
+            style: { backgroundImage: 'url(' + _moves2.default[this.state.value]['url'] + ')',
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain" } })
         ),
         _react2.default.createElement(
           'div',
-          { className: 'BS col-xs-6 col-md-4', id: 'right' },
-          _react2.default.createElement('img', { id: 'move', src: _moves2.default[this.state.value]['url'], className: 'img-responsive' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'BS col-xs-6 col-md-12' },
+          { className: 'BS col-xs-6 col-sm-12' },
           _react2.default.createElement(
             'pre',
             { id: 'moveTips' },
