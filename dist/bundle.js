@@ -21275,7 +21275,7 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'container-fluid' },
+        { className: 'container-fluid', id: 'big-container' },
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
           'div',

@@ -15,6 +15,15 @@ pre {
   z-index: 50
 }
 
+.BS {
+  padding: 0;
+  
+}
+
+#big-container {
+  padding: 0 1vw 0 1vw;
+}
+
 #navbar1 {
   margin-bottom: 1vh
 }

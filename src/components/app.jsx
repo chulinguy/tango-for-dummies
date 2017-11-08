@@ -23,7 +23,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='container-fluid' id='big-container'>
         <Header />
           <div className='BS col-xs-12 col-sm-8' id='left'>
             <Flowchart 
