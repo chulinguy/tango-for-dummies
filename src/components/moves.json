@@ -2,7 +2,7 @@
   { 
     "id": 0,
     "name": "0. Welcome! Pick a different move to show here ...",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MSVlGUC11TWxNUDg",
+    "url": "./dist/images/Tango_welcome.jpg",
     "description": "Welcome to Tango for Dummies!",
     "tips": "Welcome to the Tango Flowchart! Use the image above to navigate."
   },
