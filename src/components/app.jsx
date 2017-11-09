@@ -34,12 +34,16 @@ class App extends React.Component {
             <div className='BS col-xs-6 col-sm-4' id='right' 
             style={{backgroundImage: `url(${moves[this.state.value]['url']})`,
                     backgroundRepeat:"no-repeat",
-                    backgroundSize:"contain" }}>
-              {/* <img id='move' src={moves[0]['url']} className='img-responsive'/> */}
+                    backgroundSize:"contain",
+                    backgroundColor: "white"
+                  }}>
             </div>
           </div>
-          <div className='BS col-xs-6 col-sm-12'>
-            <pre id='moveTips'>{moves[this.state.value]['tips']}</pre>
+          <div id='text' className='BS col-xs-12'>
+            <p>
+              <img id='move' src={moves[this.state.value]['url']} className='img-responsive'/>
+              <span id='moveTips'>{moves[this.state.value]['tips']}</span>
+            </p>
           </div>
       </div>
     )

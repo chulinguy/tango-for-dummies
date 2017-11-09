@@ -17,11 +17,11 @@ class Header extends React.Component {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand">Tango for Dummies</a>
+          <a className="navbar-brand">Tango Flowchart</a>
         </div>
         <div id="navbar" className="navbar-collapse collapse">
           <ul className="nav navbar-nav">
-            <li className="active"><a href="..">Home</a></li>
+            {/*<li className="active">Home</li>
             <li><a href="about">About</a></li>
             <li><a href="contact">Contact</a></li>
             <li className="dropdown">
@@ -31,7 +31,7 @@ class Header extends React.Component {
                 <li><a href="leaders-starter">Leaders' Starter Guide</a></li>
                 <li><a href="followers-starter">Followers' Starter Guide</a></li>
               </ul>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
