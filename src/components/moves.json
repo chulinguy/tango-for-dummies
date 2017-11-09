@@ -16,7 +16,7 @@
    { 
     "id": 2,
     "name": "2. Parellel walking",
-    "url": "./dist/images/parakkek_walking.jpg",
+    "url": "./dist/images/parallel_walking.jpg",
     "description": "Beautiful walking is beautiful tango.\nRemember that.",
     "tips": "Tips for leaders: \n \nMove from your center!  \n*ADVANCED* Try moving your free foot a split second after the followers does.  \n \nTips for followers: \n \nLet your leader know 'where you are'!  Please provide a little bit extra pressure when the leader is walking forward; this also makes you more stable.  \n*ADVANCED* If you wear high heels, get a more experienced follower to show you how to land on your whole foot, not just your heel."
   },
@@ -37,14 +37,14 @@
   {
     "id": 5,
     "name": "5. Gancho",
-    "url": "./dist/images/gancho.jpg",
+    "url": "./dist/images/gancho.JPG",
     "description": "A gancho puts the mingle into tango.",
     "tips": "Tips for leaders: \n \nTry to have as little weight as possible on your 'hooking' leg; you may need to bend your standing leg (for shorter follower) or raise the 'hooking leg (for much taller follower).  \n \nTips for followers: \n \nPlease swing your whole leg instead of just your calf; leaders don't wear groin protectors to tango."
   },
   {
     "id": 6,
     "name": "6. Parada pasada",
-    "url": "./dist/images/pasada.jpg",
+    "url": "./dist/images/pasada.JPG",
     "description": "The 'pass-over' is usually the first fun move you'll learn.",
     "tips": "Tips for leaders: \n \nMake sure the follower knows your foot obstacle is there, by physical contact, not by psychic connection. \n \nTips for followers: \n \nI believe that followers should get to play here for a few seonds, unless it creates a traffic jam, in which case, make sure to look extra gud cuz' people watchin'."
   },
@@ -60,12 +60,12 @@
     "name": "8. Giro/Molinete",
     "url": "./dist/images/giro.gif",
     "description": "What is fancy tango without turns and spins?",
-    "tips": "Tips for leaders: \n \nEngage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers:\n\n Giros/molinetes are difficult!  There are three important points (don't rush, take long steps, and be consistent).  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight)."
+    "tips": "Tips for leaders: \n \nEngage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers:\n\nGiros/molinetes are difficult!  There are three important points (don't rush, take long steps, and be consistent).  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight)."
   }, 
   {
     "id":9,
     "name": "9. Rock Step Turn",
-    "url": "./dist/images/Rock_step.jpg",
+    "url": "./dist/images/Rock_step.JPG",
     "description": "Counter-clockwise rock step turns are so simple and useful",
     "tips": "Tips for leaders: \n \nFor the rock step, take a smaller step than you think you need; it helps you turn more. \n \nTips for followers:\n \nThink of rock steps as a dynamic weight change, so take your time.  "
   }
