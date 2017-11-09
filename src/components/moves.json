@@ -9,14 +9,14 @@
   { 
     "id": 1,
     "name": "1. Weight change",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MckpnZmlDdk1kZ1k",
+    "url": "./dist/images/weight_change1.gif",
     "description": "This is known as the zeroth pattern for tango.",
     "tips": "Tips for leaders: \n \nGood place to come back to take a tiny break.  \n*ADVANCED* A follower's weight change actually has a 'shape', which is 'flat' as long as there is some weight on both of follower's feet.  As soon as all the weight is on only one of follower's foot, there is a very slight 'dip', which is your cue to weight change to other direction or start walking.  \n \nTips for followers: \n \nKeep your heels together! Not only would you look taller but you would have better posture too \uD83D\uDE00"  
   },
    { 
     "id": 2,
     "name": "2. Parellel walking",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MNWVFTTRrb282QVU",
+    "url": "./dist/images/parakkek_walking.jpg",
     "description": "Beautiful walking is beautiful tango.\nRemember that.",
     "tips": "Tips for leaders: \n \nMove from your center!  \n*ADVANCED* Try moving your free foot a split second after the followers does.  \n \nTips for followers: \n \nLet your leader know 'where you are'!  Please provide a little bit extra pressure when the leader is walking forward; this also makes you more stable.  \n*ADVANCED* If you wear high heels, get a more experienced follower to show you how to land on your whole foot, not just your heel."
   },
@@ -30,42 +30,42 @@
   {
     "id": 4,
     "name": "4. Cruzada",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MOWRGWDNRVW90aVU", 
+    "url": "./dist/images/cruzada.jpg",
     "description": "A small cross is a good cross.",
     "tips": "Tips for leaders: \n \nAn ocho cortado is a much more intuitive way to lead into 'cross' in my opinion.  For the 8-count basic way, remember to dissociate!  \n \nTips for followers:\n\n Keep your crosses small!  For the 8-count basic way, take a larger step right before the 'cross' happens, to create more room for the 'cross'."
   },
   {
     "id": 5,
     "name": "5. Gancho",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MbWNwcjhFX00wUlE",
+    "url": "./dist/images/gancho.jpg",
     "description": "A gancho puts the mingle into tango.",
     "tips": "Tips for leaders: \n \nTry to have as little weight as possible on your 'hooking' leg; you may need to bend your standing leg (for shorter follower) or raise the 'hooking leg (for much taller follower).  \n \nTips for followers: \n \nPlease swing your whole leg instead of just your calf; leaders don't wear groin protectors to tango."
   },
   {
     "id": 6,
     "name": "6. Parada pasada",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MTlBKR2dsZmdaS3M",
+    "url": "./dist/images/pasada.jpg",
     "description": "The 'pass-over' is usually the first fun move you'll learn.",
     "tips": "Tips for leaders: \n \nMake sure the follower knows your foot obstacle is there, by physical contact, not by psychic connection. \n \nTips for followers: \n \nI believe that followers should get to play here for a few seonds, unless it creates a traffic jam, in which case, make sure to look extra gud cuz' people watchin'."
   },
   {
     "id": 7,
     "name": "7. Ocho",
-    "url": "http://www.virtuar.com/tango/theory/2014/20141008_focho4_sm.png",
+    "url": "./dist/images/ocho.png",
     "description":"The famous figure-8 core exercise.",
     "tips": "Tips for leaders: \n \nUse your spine, not your arms, to make ochos happen.  A ocho led entirely by arms is known as an 'oucho'.  \n \nTips for followers: \n \nFor forward ochos, utilize the 'unwinding' of your core to pivot easier; for back ochos, use both your own core and your leader for pivoting."
   },
   {
     "id":8,
     "name": "8. Giro/Molinete",
-    "url":"https://s-media-cache-ak0.pinimg.com/originals/8f/71/10/8f71102accf5e6eff2cfc67c81d122b1.gif",
+    "url": "./dist/images/giro.gif",
     "description": "What is fancy tango without turns and spins?",
     "tips": "Tips for leaders: \n \nEngage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers:\n\n Giros/molinetes are difficult!  There are three important points (don't rush, take long steps, and be consistent).  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight)."
   }, 
   {
     "id":9,
     "name": "9. Rock Step Turn",
-    "url": "https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MRjFZOEllTzZqOUk",
+    "url": "./dist/images/Rock_step.jpg",
     "description": "Counter-clockwise rock step turns are so simple and useful",
     "tips": "Tips for leaders: \n \nFor the rock step, take a smaller step than you think you need; it helps you turn more. \n \nTips for followers:\n \nThink of rock steps as a dynamic weight change, so take your time.  "
   }
