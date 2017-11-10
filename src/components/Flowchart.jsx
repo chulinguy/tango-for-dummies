@@ -15,7 +15,7 @@ class Flowchart extends React.Component {
   render() {
     return (
       <div id ='myDiagramDiv'>
-        <img id='flowchart' src='https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MZGFQeUlMVHpsNVk' useMap="#image-map"/>
+        <img id='flowchart' src='./dist/images/Tango_for_dummies' useMap="#image-map"/>
         <map name="image-map">
           <ImageMapHover title="Weight Change" coords="409,1,643,48" number="1" imgChange={this.props.imgChange}/>
           <ImageMapHover title="The Cross" coords="443,229,546,182" number="4" imgChange={this.props.imgChange}/>
