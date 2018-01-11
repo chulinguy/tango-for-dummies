@@ -71,10 +71,6 @@ body {
   height: 100%
 }
 
-/* #flowchart {
-  margin-bottom: 1vh
-} */
-
 @media (max-width: 767px) {
   .row-above {
     display: block

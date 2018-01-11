@@ -1,6 +1,90 @@
 @import "compass";
+@import "compass/css3";
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
 @import "partials/variables";
-// @import "partials/normalize";
-@import "partials/base";
-@import "bootstrap-sass";
+@import "partials/mixin";
 
+body { 
+  background-color: $dairy-cream
+}
+
+.BS {
+  padding: 0;
+}
+
+.row-above {
+  @include flexbox-enable;
+  @media (max-width: $screenBreakPt) {
+    display: block
+  }
+}
+
+.hover-div {
+  background-color: $turqoise-green;
+  z-index: 50;
+  position: relative
+}
+
+.margin-btm-1vh {
+  margin-bottom: 1vh;
+  @media (max-width: $screenBreakPt) {
+    margin-bottom: 2vh;
+  }
+}
+
+#move {
+  height: 0;
+  width: 0
+}
+
+#big-container {
+  padding: 0 1vw 0 1vw;
+}
+
+#flowchart {
+  width: 100%
+}
+
+#left {
+  @include custom-flex-func(2, $screenBreakPt);
+}
+
+#right {
+  @include custom-flex-func(1, $screenBreakPt);
+  border-left: 1px solid black;
+  @media (max-width: $screenBreakPt) {
+    display: none
+  }
+}
+
+#text{
+  @media (max-width: $screenBreakPt) {
+    height: 50vh;
+    margin-top: 2vh;
+  }
+}
+
+#move {
+  max-height: 100%;
+  max-width: 100%; 
+  z-index: 10;
+  @media (max-width: $screenBreakPt) {
+    width: 50vw;
+    height: auto;
+    float:left;
+    margin-right: 1vw;
+  }
+}
+
+#moveDesc {
+  white-space: pre-wrap;
+  height: 100%
+}
+
+#moveTips {
+  @extend #moveDesc;
+  z-index: 10;
+  position: relative;
+}

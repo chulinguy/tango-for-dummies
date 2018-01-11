@@ -1,0 +1,23 @@
+@mixin custom-flex-func ($num, $bp) {
+  -webkit-flex: $num;
+   -webkit-box: $num;
+      -moz-box: $num; 
+   -ms-flexbox: $num;
+          flex: $num;
+
+  @media (max-width: $bp) {
+    -webkit-flex: none;
+     -webkit-box: none;
+        -moz-box: none; 
+     -ms-flexbox: none;
+            flex: none;
+  }
+}
+
+@mixin flexbox-enable {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

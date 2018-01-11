@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
       <div className='container-fluid' id='big-container'>
         <Header />
-          <div className='row-above'>
+          <div className='row-above margin-btm-1vh'>
             <div className='BS col-xs-12 col-sm-8' id='left'>
               <Flowchart 
                 imgChange={this.imgChange}
@@ -33,10 +33,10 @@ class App extends React.Component {
             </div>
             <div className='BS col-xs-6 col-sm-4' id='right' 
             style={{backgroundImage: `url(${moves[this.state.value]['url']})`,
-                    backgroundRepeat:"no-repeat",
-                    backgroundSize:"contain",
-                    backgroundColor: "white"
-                  }}>
+              backgroundRepeat:"no-repeat",
+              backgroundSize:"contain",
+              backgroundColor: "white"
+            }}>
             </div>
           </div>
           <div id='text' className='BS col-xs-12'>
