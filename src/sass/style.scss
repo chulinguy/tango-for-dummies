@@ -6,6 +6,10 @@
 @import "partials/variables";
 @import "partials/mixin";
 
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 body { 
   background-color: $dairy-cream
 }
