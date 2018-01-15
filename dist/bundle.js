@@ -705,7 +705,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* 11 */
 /***/ (function(module, exports) {
 
-module.exports = [{"id":0,"name":"0. Welcome! Pick a different move to show here ...","url":"./dist/images/Tango_welcome.jpg","description":"Welcome to Tango for Dummies!","tips":"Welcome to the Tango Flowchart! Use the image above to navigate."},{"id":1,"name":"1. Weight change","url":"./dist/images/weight_change1.gif","description":"This is known as the zeroth pattern for tango.","tips":"Tips for leaders: \n \nGood place to come back to take a tiny break.  \n*ADVANCED* A follower's weight change actually has a 'shape', which is 'flat' as long as there is some weight on both of follower's feet.  As soon as all the weight is on only one of follower's foot, there is a very slight 'dip', which is your cue to weight change to other direction or start walking.  \n \nTips for followers: \n \nKeep your heels together! Not only would you look taller but you would have better posture too 😀"},{"id":2,"name":"2. Parellel walking","url":"./dist/images/parallel_walking.jpg","description":"Beautiful walking is beautiful tango.\nRemember that.","tips":"Tips for leaders: \n \nMove from your center!  \n*ADVANCED* Try moving your free foot a split second after the followers does.  \n \nTips for followers: \n \nLet your leader know 'where you are'!  Please provide a little bit extra pressure when the leader is walking forward; this also makes you more stable.  \n*ADVANCED* If you wear high heels, get a more experienced follower to show you how to land on your whole foot, not just your heel."},{"id":3,"name":"3. Cross walking","url":"https://drive.google.com/uc?export=download&id=0BzybsaJP9M7MSUxzaWdFbjNITjg","description":"Cross system walking in a tango specialty.  Unless you're an ice-skater.","tips":"Tips for leaders: \n \nTry to point your chest at your follower always.  *ADVANCED* There is an inline/inside version of cross walking that is harder than the two shown.  \n \nTips for followers: \n\nPrepare a well-written speech for when your leader accidentally step on you 😒.  "},{"id":4,"name":"4. Cruzada","url":"./dist/images/cruzada.jpg","description":"A small cross is a good cross.","tips":"Tips for leaders: \n \nAn ocho cortado is a much more intuitive way to lead into 'cross' in my opinion.  For the 8-count basic way, remember to dissociate!  \n \nTips for followers:\n\n Keep your crosses small!  For the 8-count basic way, take a larger step right before the 'cross' happens, to create more room for the 'cross'."},{"id":5,"name":"5. Gancho","url":"./dist/images/gancho.JPG","description":"A gancho puts the mingle into tango.","tips":"Tips for leaders: \n \nTry to have as little weight as possible on your 'hooking' leg; you may need to bend your standing leg (for shorter follower) or raise the 'hooking leg (for much taller follower).  \n \nTips for followers: \n \nPlease swing your whole leg instead of just your calf; leaders don't wear groin protectors to tango."},{"id":6,"name":"6. Parada pasada","url":"./dist/images/pasada.JPG","description":"The 'pass-over' is usually the first fun move you'll learn.","tips":"Tips for leaders: \n \nMake sure the follower knows your foot obstacle is there, by physical contact, not by psychic connection. \n \nTips for followers: \n \nI believe that followers should get to play here for a few seonds, unless it creates a traffic jam, in which case, make sure to look extra gud cuz' people watchin'."},{"id":7,"name":"7. Ocho","url":"./dist/images/ocho.png","description":"The famous figure-8 core exercise.","tips":"Tips for leaders: \n \nUse your spine, not your arms, to make ochos happen.  A ocho led entirely by arms is known as an 'oucho'.  \n \nTips for followers: \n \nFor forward ochos, utilize the 'unwinding' of your core to pivot easier; for back ochos, use both your own core and your leader for pivoting."},{"id":8,"name":"8. Giro/Molinete","url":"./dist/images/giro.gif","description":"What is fancy tango without turns and spins?","tips":"Tips for leaders: \n \nEngage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers:\n\nGiros/molinetes are difficult!  There are three important points (don't rush, take long steps, and be consistent).  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight)."},{"id":9,"name":"9. Rock Step Turn","url":"./dist/images/Rock_step.JPG","description":"Counter-clockwise rock step turns are so simple and useful","tips":"Tips for leaders: \n \nFor the rock step, take a smaller step than you think you need; it helps you turn more. \n \nTips for followers:\n \nThink of rock steps as a dynamic weight change, so take your time.  "}]
+module.exports = [{"id":0,"name":"0. Welcome! Pick a different move to show here ...","url":"./dist/images/Tango_welcome.jpg","description":"Welcome to Tango for Dummies!","tips":"Welcome to the Tango Flowchart! Use the image above to navigate."},{"id":1,"name":"1. Weight change","url":"./dist/images/weight_change1.gif","description":"This is known as the zeroth pattern for tango.","tips":"Tips for leaders: \n \nGood place to come back to take a tiny break.  \n*ADVANCED* A follower's weight change actually has a 'shape', which is 'flat' as long as there is some weight on both of follower's feet.  As soon as all the weight is on only one of follower's foot, there is a very slight 'dip', which is your cue to weight change to other direction or start walking.  \n \nTips for followers: \n \nKeep your heels together! Not only would you look taller but you would have better posture too 😀"},{"id":2,"name":"2. Parellel walking","url":"./dist/images/parallel_walking.jpg","description":"Beautiful walking is beautiful tango.\nRemember that.","tips":"Tips for leaders: \n \nMove from your center!  \n*ADVANCED* Try moving your free foot a split second after the followers does.  \n \nTips for followers: \n \nLet your leader know 'where you are'!  Please provide a little bit extra pressure when the leader is walking forward; this also makes you more stable.  \n*ADVANCED* If you wear high heels, get a more experienced follower to show you how to land on your whole foot, not just your heel."},{"id":3,"name":"3. Cross walking","url":"./dist/images/cross_walk.jpg","description":"Cross system walking in a tango specialty.  Unless you're an ice-skater.","tips":"Tips for leaders: \n \nTry to point your chest at your follower always.  *ADVANCED* There is an inline/inside version of cross walking that is harder than the two shown.  \n \nTips for followers: \n\nPrepare a well-written speech for when your leader accidentally step on you 😒.  "},{"id":4,"name":"4. Cruzada","url":"./dist/images/cruzada.jpg","description":"A small cross is a good cross.","tips":"Tips for leaders: \n \nAn ocho cortado is a much more intuitive way to lead into 'cross' in my opinion.  For the 8-count basic way, remember to dissociate!  \n \nTips for followers:\n\n Keep your crosses small!  For the 8-count basic way, take a larger step right before the 'cross' happens, to create more room for the 'cross'."},{"id":5,"name":"5. Gancho","url":"./dist/images/gancho.JPG","description":"A gancho puts the mingle into tango.","tips":"Tips for leaders: \n \nTry to have as little weight as possible on your 'hooking' leg; you may need to bend your standing leg (for shorter follower) or raise the 'hooking leg (for much taller follower).  \n \nTips for followers: \n \nPlease swing your whole leg instead of just your calf; leaders don't wear groin protectors to tango."},{"id":6,"name":"6. Parada pasada","url":"./dist/images/pasada.JPG","description":"The 'pass-over' is usually the first fun move you'll learn.","tips":"Tips for leaders: \n \nMake sure the follower knows your foot obstacle is there, by physical contact, not by psychic connection. \n \nTips for followers: \n \nI believe that followers should get to play here for a few seonds, unless it creates a traffic jam, in which case, make sure to look extra gud cuz' people watchin'."},{"id":7,"name":"7. Ocho","url":"./dist/images/ocho.png","description":"The famous figure-8 core exercise.","tips":"Tips for leaders: \n \nUse your spine, not your arms, to make ochos happen.  A ocho led entirely by arms is known as an 'oucho'.  \n \nTips for followers: \n \nFor forward ochos, utilize the 'unwinding' of your core to pivot easier; for back ochos, use both your own core and your leader for pivoting."},{"id":8,"name":"8. Giro/Molinete","url":"./dist/images/giro.gif","description":"What is fancy tango without turns and spins?","tips":"Tips for leaders: \n \nEngage your back muscles, which will prevent over-using your arms and help keep your upper body quiet. \n \nTips for followers:\n\nGiros/molinetes are difficult!  There are three important points (don't rush, take long steps, and be consistent).  *ADVANCED* followers, to get around your leader faster, stay extra light during the back step(don't transfer all your weight)."},{"id":9,"name":"9. Rock Step Turn","url":"./dist/images/Rock_step.JPG","description":"Counter-clockwise rock step turns are so simple and useful","tips":"Tips for leaders: \n \nFor the rock step, take a smaller step than you think you need; it helps you turn more. \n \nTips for followers:\n \nThink of rock steps as a dynamic weight change, so take your time.  "}]
 
 /***/ }),
 /* 12 */
@@ -18396,6 +18396,14 @@ var App = function (_React$Component) {
       // console.log('imgChange is invoked, state.value = ', this.state.value)
     }
   }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      //preload images
+      _moves2.default.forEach(function (move) {
+        return document.createElement("img").src = move.url;
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -19438,67 +19446,44 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Header = function (_React$Component) {
-  _inherits(Header, _React$Component);
-
-  function Header(props) {
-    _classCallCheck(this, Header);
-
-    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
-  }
-
-  _createClass(Header, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "nav",
-        { className: "navbar navbar-inverse margin-btm-1vh" },
+var Header = function Header() {
+  return _react2.default.createElement(
+    "nav",
+    { className: "navbar navbar-inverse margin-btm-1vh" },
+    _react2.default.createElement(
+      "div",
+      { className: "navbar-header" },
+      _react2.default.createElement(
+        "button",
+        { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
         _react2.default.createElement(
-          "div",
-          { className: "navbar-header" },
-          _react2.default.createElement(
-            "button",
-            { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
-            _react2.default.createElement(
-              "span",
-              { className: "sr-only" },
-              "Toggle navigation"
-            ),
-            _react2.default.createElement("span", { className: "icon-bar" }),
-            _react2.default.createElement("span", { className: "icon-bar" }),
-            _react2.default.createElement("span", { className: "icon-bar" })
-          ),
-          _react2.default.createElement(
-            "a",
-            { className: "navbar-brand" },
-            "Tango Flowchart"
-          )
+          "span",
+          { className: "sr-only" },
+          "Toggle navigation"
         ),
-        _react2.default.createElement(
-          "div",
-          { id: "navbar", className: "navbar-collapse collapse" },
-          _react2.default.createElement("ul", { className: "nav navbar-nav" })
-        )
-      );
-    }
-  }]);
-
-  return Header;
-}(_react2.default.Component);
+        _react2.default.createElement("span", { className: "icon-bar" }),
+        _react2.default.createElement("span", { className: "icon-bar" }),
+        _react2.default.createElement("span", { className: "icon-bar" })
+      ),
+      _react2.default.createElement(
+        "a",
+        { className: "navbar-brand" },
+        "Tango Flowchart"
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { id: "navbar", className: "navbar-collapse collapse" },
+      _react2.default.createElement("ul", { className: "nav navbar-nav" })
+    )
+  );
+};
 
 exports.default = Header;
 
