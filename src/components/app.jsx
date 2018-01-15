@@ -21,6 +21,11 @@ class App extends React.Component {
     // console.log('imgChange is invoked, state.value = ', this.state.value)
   }
 
+  componentDidMount(){
+    //preload images
+    moves.forEach(move => document.createElement("img").src = move.url);
+  }
+
   render() {
     return (
       <div className='container-fluid' id='big-container'>
