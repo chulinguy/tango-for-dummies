@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "arrow-parens":[1,"as-needed"],
+    "comma-dangle": 0,
+    "dot-notation": [2, {"allowKeywords": true}],
+    "eol-last": [1],
+    "jsx-quotes": 1,
+    "linebreak-style": ["error", "windows"],
+    "max-len": [0, 80, 4],
+    "no-trailing-spaces": [1],
+    "no-unused-vars": [1],
+    "react/jsx-indent-props": 1,
+    "react/jsx-tag-spacing": ["error", {
+      "beforeSelfClosing": "always"
+    }],
+    "react/self-closing-comp": 1,
+    "semi": [1],
+    "spaced-line-comment": [0, "always"]
+  }
+}
