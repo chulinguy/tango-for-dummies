@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactHover from 'react-hover';
-// import _ from 'underscore';
-
 import Header from './Header.jsx';
 import Flowchart from "./Flowchart.jsx";
 import moves from './moves.json';
+import { createStore } from 'redux'
 
 class App extends React.Component {
   constructor(props) {
