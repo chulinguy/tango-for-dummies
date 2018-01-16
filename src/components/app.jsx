@@ -1,15 +1,11 @@
 import React from 'react';
 import Header from './Header';
-import Flowchart from './Flowchart';
-import moves from './moves.json';
+import Flowchart from '../containers/Flowchart';
+import moves from '../moves.json';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      value: 0
-    }
     this.imgChange = this.imgChange.bind(this);
   }
 
@@ -38,19 +34,17 @@ class App extends React.Component {
         <Header />
         <div className="row-above margin-btm-1vh">
           <div className="BS col-xs-12 col-sm-8" id="left">
-            <Flowchart
-              imgChange={this.imgChange}
-            />
+            <Flowchart />
           </div>
           <div
-            className="BS col-xs-6 col-sm-4" 
-            id="right" 
+            className="BS col-xs-6 col-sm-4"
+            id="right"
             style={moveImgStyle}
           />
         </div>
         <div id="text" className="BS col-xs-12">
           <p>
-            <img id="move" alt="" src={moves[this.state.value].url} className="img-responsive"/>
+            <img id="move" alt="" src={moves[this.state.value].url} className="img-responsive" />
             <span id="moveTips">{moves[this.state.value].tips}</span>
           </p>
         </div>

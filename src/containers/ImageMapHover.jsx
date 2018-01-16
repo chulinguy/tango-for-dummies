@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactHover from 'react-hover';
 import PropTypes from 'prop-types';
-import moves from './moves.json';
+import moves from '../moves.json';
 
 class ImageMapHover extends React.Component {
   constructor(props) {
