@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import $ from 'jQuery';
 import ImageMapHover from './ImageMapHover';
 
 class Flowchart extends React.Component {

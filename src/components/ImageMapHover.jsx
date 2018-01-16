@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import moves from './moves.json';
 
 class ImageMapHover extends React.Component {
+  constructor(props) {
+    super(props)
+    this.changeToSpecificImage = this.changeToSpecificImage.bind(this);
+  }
   componentDidMount() {
     window.addEventListener('resize', this.render);
   }
@@ -51,7 +55,7 @@ class ImageMapHover extends React.Component {
 
 ImageMapHover.propTypes = {
   imgChange: PropTypes.func.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.string.isRequired,
   coords: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
