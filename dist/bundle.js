@@ -1458,7 +1458,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
   { store: _store2.default },
-  _react2.default.createElement(_app2.default, { reduxState: _store2.default.getState() })
+  _react2.default.createElement(_app2.default, null)
 ), document.getElementById('app'));
 // store.subscribe(reactDOMrender);
 
@@ -21875,7 +21875,7 @@ var ImageMapHover = function (_React$Component) {
   }, {
     key: 'changeToSpecificImage',
     value: function changeToSpecificImage() {
-      _store2.default.dispatch((0, _actions.imgChange)(this.props.number));
+      this.props.imgChange(this.props.number);
     }
   }, {
     key: 'render',
@@ -21931,7 +21931,18 @@ ImageMapHover.propTypes = {
   title: _propTypes2.default.string.isRequired
 };
 
-exports.default = (0, _reactRedux.connect)()(ImageMapHover);
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    imgChange: function imgChange(value) {
+      return dispatch({
+        type: 'MOVE_CHANGE',
+        value: value
+      });
+    }
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(ImageMapHover);
 
 /***/ }),
 /* 83 */
@@ -21956,35 +21967,49 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(69);
 
+var _propTypes = __webpack_require__(5);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _moves = __webpack_require__(83);
 
 var _moves2 = _interopRequireDefault(_moves);
 
-var _store = __webpack_require__(89);
-
-var _store2 = _interopRequireDefault(_store);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MoveText = function MoveText() {
-  var currentValue = _store2.default.getState().imgReducer;
+// import store from '../store';
+
+var MoveText = function MoveText(_ref) {
+  var value = _ref.value;
+
+  // const value = store.getState().imgReducer;
   return _react2.default.createElement(
     'div',
     { id: 'text', className: 'BS col-xs-12' },
     _react2.default.createElement(
       'p',
       null,
-      _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[currentValue].url, className: 'img-responsive' }),
+      _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[value].url, className: 'img-responsive' }),
       _react2.default.createElement(
         'span',
         { id: 'moveTips' },
-        _moves2.default[currentValue].tips
+        _moves2.default[value].tips
       )
     )
   );
 };
 
-exports.default = (0, _reactRedux.connect)()(MoveText);
+// MoveText.propTypes = {
+//   value: PropTypes.string
+// }
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    value: state.imgReducer
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(MoveText);
 
 /***/ }),
 /* 85 */
@@ -22007,16 +22032,15 @@ var _moves = __webpack_require__(83);
 
 var _moves2 = _interopRequireDefault(_moves);
 
-var _store = __webpack_require__(89);
-
-var _store2 = _interopRequireDefault(_store);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MovePicRightSide = function MovePicRightSide() {
-  var currentValue = _store2.default.getState().imgReducer;
+// import store from '../store';
+
+var MovePicRightSide = function MovePicRightSide(_ref) {
+  var value = _ref.value;
+
   var moveImgStyle = {
-    backgroundImage: 'url(' + _moves2.default[currentValue].url + ')',
+    backgroundImage: 'url(' + _moves2.default[value].url + ')',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     backgroundColor: 'white'
@@ -22028,7 +22052,13 @@ var MovePicRightSide = function MovePicRightSide() {
   });
 };
 
-exports.default = (0, _reactRedux.connect)()(MovePicRightSide);
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    value: state.imgReducer
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(MovePicRightSide);
 
 /***/ }),
 /* 86 */

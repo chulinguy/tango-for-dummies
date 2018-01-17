@@ -6,7 +6,7 @@ import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App reduxState={store.getState()} />
+    <App />
   </Provider>, 
   document.getElementById('app')
 );

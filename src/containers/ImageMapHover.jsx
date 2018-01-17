@@ -20,7 +20,7 @@ class ImageMapHover extends React.Component {
   }
 
   changeToSpecificImage() {
-    store.dispatch(imgChange(this.props.number));
+    this.props.imgChange(this.props.number);
   }
 
   render() {
@@ -62,5 +62,13 @@ ImageMapHover.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default connect()(ImageMapHover);
+const mapDispatchToProps = dispatch => ({
+  imgChange: value => dispatch({
+    type: 'MOVE_CHANGE',
+    value
+  })
+})
+
+
+export default connect(null, mapDispatchToProps)(ImageMapHover);
 

@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import moves from '../moves.json';
-import store from '../store';
+// import store from '../store';
 
-const MovePicRightSide = () => {
-  const currentValue = store.getState().imgReducer;
+const MovePicRightSide = ({ value }) => {
   const moveImgStyle = {
-    backgroundImage: `url(${moves[currentValue].url})`,
+    backgroundImage: `url(${moves[value].url})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     backgroundColor: 'white'
@@ -20,4 +19,8 @@ const MovePicRightSide = () => {
   );
 }
 
-export default connect()(MovePicRightSide);
+const mapStateToProps = state => ({
+  value: state.imgReducer
+});
+
+export default connect(mapStateToProps)(MovePicRightSide);
