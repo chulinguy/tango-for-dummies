@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactHover from 'react-hover';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import moves from '../moves.json';
+import { imgChange } from '../actions';
+import store from '../store';
 
 class ImageMapHover extends React.Component {
   constructor(props) {
@@ -17,7 +20,8 @@ class ImageMapHover extends React.Component {
   }
 
   changeToSpecificImage() {
-    this.props.imgChange(this.props.number);
+    console.log('invoking changeToSpecificImage')
+    store.dispatch(imgChange(this.props.number));
   }
 
   render() {
@@ -54,10 +58,10 @@ class ImageMapHover extends React.Component {
 }
 
 ImageMapHover.propTypes = {
-  imgChange: PropTypes.func.isRequired,
   number: PropTypes.string.isRequired,
   coords: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
 
-export default ImageMapHover; 
+export default connect()(ImageMapHover);
+

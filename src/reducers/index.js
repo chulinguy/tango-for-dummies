@@ -1,23 +1,10 @@
-const initialState = {
-  value: 0,
-  favoriteMoves: []
-};
+import { combineReducers } from 'redux';
+import imgReducer from './imgReducer';
+import favReducer from './favReducer';
 
-export default function flowchart(state = initialState, action) {
-  const { value, favoriteMoves } = state;
+const maindReducer = combineReducers({
+  imgReducer,
+  favReducer
+});
 
-  switch (action.type) {
-    case 'MOVE_CHANGE':
-      return {
-        value: action.value,
-        favoriteMoves
-      }
-    case 'MARK_MOVE_AS_FAV':
-      return {
-        value,
-        favoriteMoves: [...state.favoriteMoves, action.value]
-      }
-    default:
-      return state;
-  }
-}
+export default maindReducer;
