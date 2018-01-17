@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moves from '../moves.json';
 import { imgChange } from '../actions';
-import store from '../store';
 
 class ImageMapHover extends React.Component {
   constructor(props) {
@@ -60,6 +59,7 @@ ImageMapHover.propTypes = {
   number: PropTypes.string.isRequired,
   coords: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  imgChange: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => ({

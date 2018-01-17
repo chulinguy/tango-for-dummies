@@ -4,4 +4,4 @@ import mainReducer from './reducers';
 
 const middleware = applyMiddleware(createLogger());
 
-export default createStore(mainReducer, middleware)
+export default createStore(mainReducer, middleware);

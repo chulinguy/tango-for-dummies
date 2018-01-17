@@ -21838,10 +21838,6 @@ var _moves2 = _interopRequireDefault(_moves);
 
 var _actions = __webpack_require__(88);
 
-var _store = __webpack_require__(89);
-
-var _store2 = _interopRequireDefault(_store);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21928,7 +21924,8 @@ var ImageMapHover = function (_React$Component) {
 ImageMapHover.propTypes = {
   number: _propTypes2.default.string.isRequired,
   coords: _propTypes2.default.string.isRequired,
-  title: _propTypes2.default.string.isRequired
+  title: _propTypes2.default.string.isRequired,
+  imgChange: _propTypes2.default.func.isRequired
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
@@ -21977,12 +21974,8 @@ var _moves2 = _interopRequireDefault(_moves);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import store from '../store';
-
 var MoveText = function MoveText(_ref) {
   var value = _ref.value;
-
-  // const value = store.getState().imgReducer;
   return _react2.default.createElement(
     'div',
     { id: 'text', className: 'BS col-xs-12' },
@@ -21999,14 +21992,14 @@ var MoveText = function MoveText(_ref) {
   );
 };
 
-// MoveText.propTypes = {
-//   value: PropTypes.string
-// }
-
 var mapStateToProps = function mapStateToProps(state) {
   return {
     value: state.imgReducer
   };
+};
+
+MoveText.propTypes = {
+  value: _propTypes2.default.string.isRequired
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(MoveText);
@@ -22028,13 +22021,15 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(69);
 
+var _propTypes = __webpack_require__(5);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _moves = __webpack_require__(83);
 
 var _moves2 = _interopRequireDefault(_moves);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import store from '../store';
 
 var MovePicRightSide = function MovePicRightSide(_ref) {
   var value = _ref.value;
@@ -22050,6 +22045,10 @@ var MovePicRightSide = function MovePicRightSide(_ref) {
     id: 'right',
     style: moveImgStyle
   });
+};
+
+MovePicRightSide.propTypes = {
+  value: _propTypes2.default.string.isRequired
 };
 
 var mapStateToProps = function mapStateToProps(state) {

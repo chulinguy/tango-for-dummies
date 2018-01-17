@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import moves from '../moves.json';
-// import store from '../store';
 
 const MovePicRightSide = ({ value }) => {
   const moveImgStyle = {
@@ -17,7 +17,11 @@ const MovePicRightSide = ({ value }) => {
       style={moveImgStyle}
     />
   );
-}
+};
+
+MovePicRightSide.propTypes = {
+  value: PropTypes.string.isRequired
+};
 
 const mapStateToProps = state => ({
   value: state.imgReducer
