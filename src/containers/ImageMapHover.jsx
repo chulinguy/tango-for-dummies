@@ -20,7 +20,6 @@ class ImageMapHover extends React.Component {
   }
 
   changeToSpecificImage() {
-    console.log('invoking changeToSpecificImage')
     store.dispatch(imgChange(this.props.number));
   }
 

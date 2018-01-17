@@ -1,9 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import moves from '../moves.json';
+import store from '../store';
 
 const MovePicRightSide = () => {
+  const currentValue = store.getState().imgReducer;
   const moveImgStyle = {
-    backgroundImage: `url(${moves[this.state.value].url})`,
+    backgroundImage: `url(${moves[currentValue].url})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     backgroundColor: 'white'
@@ -14,7 +17,7 @@ const MovePicRightSide = () => {
       id="right"
       style={moveImgStyle}
     />
-  )
+  );
 }
 
-export default MovePicRightSide;
+export default connect()(MovePicRightSide);

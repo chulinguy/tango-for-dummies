@@ -21875,7 +21875,6 @@ var ImageMapHover = function (_React$Component) {
   }, {
     key: 'changeToSpecificImage',
     value: function changeToSpecificImage() {
-      console.log('invoking changeToSpecificImage');
       _store2.default.dispatch((0, _actions.imgChange)(this.props.number));
     }
   }, {
@@ -21955,30 +21954,37 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRedux = __webpack_require__(69);
+
 var _moves = __webpack_require__(83);
 
 var _moves2 = _interopRequireDefault(_moves);
 
+var _store = __webpack_require__(89);
+
+var _store2 = _interopRequireDefault(_store);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MoveText = function MoveText() {
+  var currentValue = _store2.default.getState().imgReducer;
   return _react2.default.createElement(
     'div',
     { id: 'text', className: 'BS col-xs-12' },
     _react2.default.createElement(
       'p',
       null,
-      _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[undefined.state.value].url, className: 'img-responsive' }),
+      _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[currentValue].url, className: 'img-responsive' }),
       _react2.default.createElement(
         'span',
         { id: 'moveTips' },
-        _moves2.default[undefined.state.value].tips
+        _moves2.default[currentValue].tips
       )
     )
   );
 };
 
-exports.default = MoveText;
+exports.default = (0, _reactRedux.connect)()(MoveText);
 
 /***/ }),
 /* 85 */
@@ -21995,15 +22001,22 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRedux = __webpack_require__(69);
+
 var _moves = __webpack_require__(83);
 
 var _moves2 = _interopRequireDefault(_moves);
 
+var _store = __webpack_require__(89);
+
+var _store2 = _interopRequireDefault(_store);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MovePicRightSide = function MovePicRightSide() {
+  var currentValue = _store2.default.getState().imgReducer;
   var moveImgStyle = {
-    backgroundImage: 'url(' + _moves2.default[undefined.state.value].url + ')',
+    backgroundImage: 'url(' + _moves2.default[currentValue].url + ')',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     backgroundColor: 'white'
@@ -22015,7 +22028,7 @@ var MovePicRightSide = function MovePicRightSide() {
   });
 };
 
-exports.default = MovePicRightSide;
+exports.default = (0, _reactRedux.connect)()(MovePicRightSide);
 
 /***/ }),
 /* 86 */
