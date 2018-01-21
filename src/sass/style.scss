@@ -25,6 +25,13 @@ body {
   background-color: $dairy-cream
 }
 
+
+.heart {
+  // float: right;
+  z-index: 200;
+  position: relative;
+}
+
 .BS {
   padding: 0;
 }

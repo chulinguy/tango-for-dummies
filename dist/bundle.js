@@ -21954,7 +21954,11 @@ var MoveText = function MoveText(_ref) {
     'div',
     { id: 'text', className: 'BS col-xs-12' },
     _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[value].url, className: 'img-responsive' }),
-    favMoves.includes(value) ? _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart float-right' }) : _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart-empty float-right' }),
+    _react2.default.createElement(
+      'button',
+      { type: 'button', className: 'btn btn-default pull-right heart' },
+      favMoves.includes(value) ? _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart' }) : _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart-empty' })
+    ),
     _react2.default.createElement(
       'p',
       { id: 'moveTips' },
