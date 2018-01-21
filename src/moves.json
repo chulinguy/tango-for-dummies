@@ -4,7 +4,7 @@
     "name": "0. Welcome! Pick a different move to show here ...",
     "url": "./dist/images/Tango_welcome.jpg",
     "description": "Welcome to Tango for Dummies!",
-    "tips": "Welcome to the Tango Flowchart! Use the image above to navigate."
+    "tips": "Welcome to the Tango Flowchart! \n \nUse the image above to navigate."
   },
   { 
     "id": 1,

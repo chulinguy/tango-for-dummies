@@ -1,6 +1,6 @@
+@import "bootstrap-compass";
 @import "compass";
 @import "compass/css3";
-@import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
 @import "partials/variables";
@@ -9,6 +9,17 @@
 ::-webkit-scrollbar { 
   display: none; 
 }
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(#{$icon-font-path}#{$icon-font-name}.ttf) format('truetype');
+  src: url(#{$icon-font-path}#{$icon-font-name}.eot?#iefix)
+  format('embedded-opentype'),
+  url(#{$icon-font-path}#{$icon-font-name}.woff) format('woff'),
+  url(#{$icon-font-path}#{$icon-font-name}.ttf) , format('truetype'),
+  url(#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id})
+  format('svg');
+  }
 
 body { 
   background-color: $dairy-cream

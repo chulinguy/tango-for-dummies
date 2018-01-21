@@ -13,7 +13,8 @@ javascripts_dir = "javascripts"
 # output_style = :expanded or :nested or :compact or :compressed
 output_style = :compressed
 # To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
+relative_assets = true
+fonts_dir = "dist/fonts/bootstrap_fonts"
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false

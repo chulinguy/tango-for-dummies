@@ -10,16 +10,9 @@ class ImageMapHover extends React.Component {
     super(props)
     this.changeToSpecificImage = this.changeToSpecificImage.bind(this);
   }
-  componentDidMount() {
-    window.addEventListener('resize', this.render);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.render);
-  }
 
   changeToSpecificImage() {
-    this.props.imgChange(this.props.number);
+    this.props.clickNewMove(this.props.number);
   }
 
   render() {
@@ -30,7 +23,7 @@ class ImageMapHover extends React.Component {
       height: window.innerHeight,
       width: window.innerWidth
     }
-    if (this.props.number === 9 && window.innerWidth < 768) {
+    if (this.props.number === '9' && window.innerWidth < 768) {
       ReactHoverOptions.shiftY = -115;
     }
 
@@ -59,16 +52,12 @@ ImageMapHover.propTypes = {
   number: PropTypes.string.isRequired,
   coords: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  imgChange: PropTypes.func.isRequired
+  clickNewMove: PropTypes.func.isRequired
 };
 
-const mapDispatchToProps = dispatch => ({
-  imgChange: value => dispatch({
-    type: 'MOVE_CHANGE',
-    value
-  })
-})
-
+const mapDispatchToProps = {
+  clickNewMove: imgChange
+}
 
 export default connect(null, mapDispatchToProps)(ImageMapHover);
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ImageMapHover from './ImageMapHover';
 
 class Flowchart extends React.Component {
@@ -25,7 +24,7 @@ class Flowchart extends React.Component {
           </map>
         </div>
       </div>
-    )
+    );
   }
 }
 
