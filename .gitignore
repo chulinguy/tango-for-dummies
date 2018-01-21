@@ -58,4 +58,5 @@ typings/
 .env
 
 yarn.lock
+.sass-cache
 
