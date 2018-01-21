@@ -57,7 +57,7 @@ ImageMapHover.propTypes = {
 
 const mapDispatchToProps = {
   clickNewMove: imgChange
-}
+};
 
 export default connect(null, mapDispatchToProps)(ImageMapHover);
 

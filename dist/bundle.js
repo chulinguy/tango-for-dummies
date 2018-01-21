@@ -21931,6 +21931,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -21945,27 +21947,88 @@ var _moves = __webpack_require__(9);
 
 var _moves2 = _interopRequireDefault(_moves);
 
+var _actions = __webpack_require__(78);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MoveText = function MoveText(_ref) {
-  var value = _ref.value,
-      favMoves = _ref.favMoves;
-  return _react2.default.createElement(
-    'div',
-    { id: 'text', className: 'BS col-xs-12' },
-    _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[value].url, className: 'img-responsive' }),
-    _react2.default.createElement(
-      'button',
-      { type: 'button', className: 'btn btn-default pull-right heart' },
-      favMoves.includes(value) ? _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart' }) : _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart-empty' })
-    ),
-    _react2.default.createElement(
-      'p',
-      { id: 'moveTips' },
-      _moves2.default[value].tips
-    )
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MoveText = function (_React$Component) {
+  _inherits(MoveText, _React$Component);
+
+  function MoveText() {
+    _classCallCheck(this, MoveText);
+
+    return _possibleConstructorReturn(this, (MoveText.__proto__ || Object.getPrototypeOf(MoveText)).apply(this, arguments));
+  }
+
+  _createClass(MoveText, [{
+    key: 'favClickHandler',
+    value: function favClickHandler() {
+      var _props = this.props,
+          value = _props.value,
+          favMove = _props.favMove;
+
+      favMove(value);
+    }
+  }, {
+    key: 'unfavClickHandler',
+    value: function unfavClickHandler() {
+      var _props2 = this.props,
+          value = _props2.value,
+          unFavMove = _props2.unFavMove;
+
+      unFavMove(value);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props3 = this.props,
+          value = _props3.value,
+          favMoves = _props3.favMoves;
+
+      return _react2.default.createElement(
+        'div',
+        { id: 'text', className: 'BS col-xs-12' },
+        _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[value].url, className: 'img-responsive' }),
+        favMoves.includes(value) ? _react2.default.createElement(
+          'button',
+          {
+            type: 'button',
+            className: 'btn btn-default pull-right heart',
+            onClick: function onClick() {
+              return _this2.unfavClickHandler();
+            }
+          },
+          _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart' })
+        ) : _react2.default.createElement(
+          'button',
+          {
+            type: 'button',
+            className: 'btn btn-default pull-right heart',
+            onClick: function onClick() {
+              return _this2.favClickHandler();
+            }
+          },
+          _react2.default.createElement('span', { className: 'glyphicon glyphicon-heart-empty' })
+        ),
+        _react2.default.createElement(
+          'p',
+          { id: 'moveTips' },
+          _moves2.default[value].tips
+        )
+      );
+    }
+  }]);
+
+  return MoveText;
+}(_react2.default.Component);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -21974,12 +22037,19 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-MoveText.propTypes = {
-  value: _propTypes2.default.string.isRequired,
-  favMoves: _propTypes2.default.arrayOf(_propTypes2.default.string).isRequired
+var mapDispatchToProps = {
+  favMove: _actions.markFavMove,
+  unFavMove: _actions.unmarkFavMove
 };
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(MoveText);
+MoveText.propTypes = {
+  value: _propTypes2.default.string.isRequired,
+  favMoves: _propTypes2.default.arrayOf(_propTypes2.default.string).isRequired,
+  favMove: _propTypes2.default.func.isRequired,
+  unFavMove: _propTypes2.default.func.isRequired
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MoveText);
 
 /***/ }),
 /* 80 */
@@ -22151,13 +22221,13 @@ function _toConsumableArray(arr) {
 var favReduce = function favReduce() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments[1];
-  var favoriteMoves = state.favoriteMoves;
 
+  // const { favoriteMoves } = state;
   switch (action.type) {
     case 'MARK_MOVE_AS_FAV':
-      return [].concat(_toConsumableArray(favoriteMoves), [action.value]);
+      return [].concat(_toConsumableArray(state), [action.value]);
     case 'UNMARK_MOVE_AS_FAV':
-      return favoriteMoves.filter(function (move) {
+      return state.filter(function (move) {
         return move !== action.value;
       });
     default:

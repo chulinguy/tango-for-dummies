@@ -1,10 +1,10 @@
 const favReduce = (state = [], action) => {
-  const { favoriteMoves } = state;
+  // const { favoriteMoves } = state;
   switch (action.type) {
     case 'MARK_MOVE_AS_FAV':
-      return [...favoriteMoves, action.value];
+      return [...state, action.value];
     case 'UNMARK_MOVE_AS_FAV':
-      return favoriteMoves.filter(move => move !== action.value);
+      return state.filter(move => move !== action.value);
     default:
       return state;
   }
