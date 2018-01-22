@@ -1,10 +1,10 @@
-# tango-for-dummies
+# Tango Flowchart
 
 This web app shares valuable tips to beginner tango dancers
 
 ### Usage
 * Click different moves on the image to navigate to another move
-* Click the `:heart:` to toggle a move to be your favorite
+* Click the :heart: to toggle a move to be your favorite
 
 ## Built With
 
