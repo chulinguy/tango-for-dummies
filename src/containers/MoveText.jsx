@@ -19,7 +19,7 @@ class MoveText extends React.Component {
     return (
       <div id="text" className="BS col-xs-12">
         <img id="move" alt="" src={moves[value].url} className="img-responsive" />
-        {favMoves.includes(value) ?
+        { favMoves.includes(value) ?
           <button
             type="button"
             className="btn btn-default pull-right heart"
@@ -27,7 +27,7 @@ class MoveText extends React.Component {
           >
             <span className="glyphicon glyphicon-heart" />
           </button>
-          :
+          : 
           <button
             type="button"
             className="btn btn-default pull-right heart"
