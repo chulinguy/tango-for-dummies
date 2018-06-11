@@ -3,7 +3,7 @@ import Header from './Header';
 import Flowchart from '../containers/Flowchart';
 import MoveText from '../containers/MoveText';
 import MovePicRightSide from '../containers/MovePicRightSide';
-import moves from '../moves.json';
+import moves from '../static_data/moves.json';
 
 class App extends React.Component {
   componentDidMount() {
@@ -23,7 +23,7 @@ class App extends React.Component {
         </div>
         <MoveText />
       </div>
-    )
+    );
   }
 }
 

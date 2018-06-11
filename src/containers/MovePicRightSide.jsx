@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import moves from '../moves.json';
+import moves from '../static_data/moves.json';
 
 const MovePicRightSide = ({ value }) => {
   const moveImgStyle = {
@@ -9,7 +9,7 @@ const MovePicRightSide = ({ value }) => {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
     backgroundColor: 'white'
-  }
+  };
   return (
     <div
       className="BS col-xs-6 col-sm-4"

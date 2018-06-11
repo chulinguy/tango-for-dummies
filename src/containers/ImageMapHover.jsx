@@ -2,12 +2,12 @@ import React from 'react';
 import ReactHover from 'react-hover';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import moves from '../moves.json';
+import moves from '../static_data/moves.json';
 import { imgChange } from '../actions';
 
 class ImageMapHover extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.changeToSpecificImage = this.changeToSpecificImage.bind(this);
   }
 
@@ -22,7 +22,7 @@ class ImageMapHover extends React.Component {
       shiftY: -70,
       height: window.innerHeight,
       width: window.innerWidth
-    }
+    };
     if (this.props.number === '9' && window.innerWidth < 768) {
       ReactHoverOptions.shiftY = -115;
     }
@@ -31,10 +31,10 @@ class ImageMapHover extends React.Component {
       <ReactHover options={ReactHoverOptions}>
         <ReactHover.Trigger type="trigger">
           <area
-            onClick={this.changeToSpecificImage} 
+            onClick={this.changeToSpecificImage}
             onKeyPress={this.changeToSpecificImage}
             alt={this.props.title}
-            coords={this.props.coords} 
+            coords={this.props.coords}
             role="button"
             tabIndex={0}
             shape="rect"
@@ -44,7 +44,7 @@ class ImageMapHover extends React.Component {
           <div className="hover-div"> {moves[this.props.number].description} </div>
         </ReactHover.Hover>
       </ReactHover>
-    )
+    );
   }
 }
 

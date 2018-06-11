@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import moves from '../moves.json';
+import moves from '../static_data/moves.json';
 import { markFavMove, unmarkFavMove } from '../actions';
 
 class MoveText extends React.Component {
@@ -27,7 +27,7 @@ class MoveText extends React.Component {
           >
             <span className="glyphicon glyphicon-heart" />
           </button>
-          : 
+          :
           <button
             type="button"
             className="btn btn-default pull-right heart"
@@ -50,7 +50,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   favMove: markFavMove,
   unFavMove: unmarkFavMove
-}
+};
 
 MoveText.propTypes = {
   value: PropTypes.string.isRequired,

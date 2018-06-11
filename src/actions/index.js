@@ -6,9 +6,9 @@ export const imgChange = value => ({
 export const markFavMove = value => ({
   type: 'MARK_MOVE_AS_FAV',
   value
-})
+});
 
 export const unmarkFavMove = value => ({
   type: 'UNMARK_MOVE_AS_FAV',
   value
-})
+});
