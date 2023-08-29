@@ -15,11 +15,11 @@ This web app shares valuable tips to beginner tango dancers
 * [HTML image map](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map)
 
 ## Deployment
-This app is accessible [here](http://chijenlu.com/tango-for-dummies/)
+This app is accessible [here](http://chulinguy.github.io/tango-for-dummies/)
 
 ## Authors
 
-* [**Chi Jen Lu**](chijenlu.com) 
+**Chi Jen Lu**
 
 ## License
 
