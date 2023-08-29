@@ -32584,7 +32584,14 @@ var Header = function Header() {
       { className: "navbar-header" },
       _react2.default.createElement(
         "button",
-        { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
+        {
+          type: "button",
+          className: "navbar-toggle collapsed",
+          "data-toggle": "collapse",
+          "data-target": "#navbar",
+          "aria-expanded": "false",
+          "aria-controls": "navbar"
+        },
         _react2.default.createElement(
           "span",
           { className: "sr-only" },
@@ -32603,7 +32610,15 @@ var Header = function Header() {
     _react2.default.createElement(
       "div",
       { id: "navbar", className: "navbar-collapse collapse" },
-      _react2.default.createElement("ul", { className: "nav navbar-nav" })
+      _react2.default.createElement(
+        "ul",
+        { className: "nav navbar-nav" },
+        _react2.default.createElement(
+          "li",
+          { className: "active" },
+          "Home"
+        )
+      )
     )
   );
 };
