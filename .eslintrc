@@ -1,27 +1,62 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+  ],
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true,
+    "jquery": true
   },
   "rules": {
-    "arrow-parens":[1,"as-needed"],
-    "comma-dangle": 0,
-    "dot-notation": [2, {"allowKeywords": true}],
-    "eol-last": [1],
-    "jsx-quotes": 1,
-    "linebreak-style": ["error", "windows"],
-    "max-len": [0, 80, 4],
-    "no-trailing-spaces": [1],
-    "no-undef": [1],
-    "no-unused-vars": [1],
-    "react/jsx-indent-props": 1,
+    "arrow-body-style": "off",
+    "arrow-parens": "error",
+    "camelcase": "off",
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "only-multiline"
+    }],
+    "dot-notation": "off",
+    "func-names": ["error", "as-needed"],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": [ "error", { "optionalDependencies": false }],
+    "import/prefer-default-export": "off",
+    "jsx-quotes": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/label-has-for": "warn",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/tabindex-no-positive" :"warn",
+    "no-console": ["error", { "allow": ["warn", "debug"] }],
+    // these undo decisions in the AirBnB config (see https://github.com/airbnb/javascript/issues/1271 )
+    "no-restricted-syntax": [
+      "off",
+      "ForOfStatement"
+    ],
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-useless-escape": "warn",
+    "one-var": ["error", { "initialized": "never" }],
+    "prefer-template": "warn",
+    "quotes": "warn",
+    "radix": "off",
+    "react/destructuring-assignment": "off",
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
+    "react/jsx-curly-spacing": "warn",
     "react/jsx-tag-spacing": ["error", {
       "beforeSelfClosing": "always"
     }],
-    "react/self-closing-comp": 1,
-    "semi": [1],
-    "spaced-line-comment": [0, "always"]
+    "react/forbid-prop-types": "warn",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unstable-nested-components": ["warn", { "allowAsProps": true }],
+    "react/self-closing-comp": "warn",
+    "react/prop-types": "off"
   }
 }
