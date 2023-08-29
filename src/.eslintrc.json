@@ -1,0 +1,61 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "arrow-parens":[1,"as-needed"],
+    "arrow-body-style": 1,
+    "camelcase": 1,
+    "comma-dangle": 0,
+    "dot-notation": [2, {"allowKeywords": true}],
+    "eol-last": [1],
+    "global-require": 1,
+    "import/prefer-default-export": 0,
+    "import/no-dynamic-require": 1,
+    "jsx-quotes": 1,
+    "linebreak-style": 0,
+    "jsx-a11y/label-has-for": 1,
+    "max-len": [0, 100, 4],
+    "no-trailing-spaces": [1],
+    "no-undef": [1],
+    "no-unused-vars": [1],
+    "no-console": 1,
+    "no-confusing-arrow": 1,
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "no-else-return": 1,
+    "import/no-extraneous-dependencies": [ "error", { "optionalDependencies": false }],
+    "object-curly-newline": ["error", { "multiline": true }],
+    "prefer-destructuring": [1, {
+      "array": true,
+      "object": true
+    }, {
+      "enforceForRenamedProperties": false
+    }],
+    "quotes": 1,
+    "quote-props": 1,
+    "react/no-multi-comp": 0,
+    "react/jsx-filename-extension": 0,
+    "react/destructuring-assignment": 0,
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "react/jsx-indent-props": 1,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-tag-spacing": ["error", {
+      "beforeSelfClosing": "always"
+    }],
+    "react/no-array-index-key": 1,
+    "react/no-danger": 1,
+    "react/prop-types": 0,
+    "react/prefer-stateless-function": 1,
+    "react/self-closing-comp": 1,
+    "semi": [1],
+    "spaced-line-comment": [0, "always"],
+    "jsx-a11y/anchor-is-valid": 0
+  }
+}

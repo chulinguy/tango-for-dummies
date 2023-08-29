@@ -9,6 +9,7 @@ class MoveText extends React.Component {
     const { value, favMove } = this.props;
     favMove(value);
   }
+
   unfavClickHandler() {
     const { value, unFavMove } = this.props;
     unFavMove(value);
@@ -16,26 +17,28 @@ class MoveText extends React.Component {
 
   render() {
     const { value, favMoves } = this.props;
+
     return (
       <div id="text" className="BS col-xs-12">
         <img id="move" alt="" src={moves[value].url} className="img-responsive" />
-        { favMoves.includes(value) ?
-          <button
-            type="button"
-            className="btn btn-default pull-right heart"
-            onClick={() => this.unfavClickHandler()}
-          >
-            <span className="glyphicon glyphicon-heart" />
-          </button>
-          :
-          <button
-            type="button"
-            className="btn btn-default pull-right heart"
-            onClick={() => this.favClickHandler()}
-          >
-            <span className="glyphicon glyphicon-heart-empty" />
-          </button>
-        }
+        { favMoves.includes(value)
+          ? (
+            <button
+              type="button"
+              className="btn btn-default pull-right heart"
+              onClick={() => this.unfavClickHandler()}
+            >
+              💜
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="btn btn-default pull-right heart"
+              onClick={() => this.favClickHandler()}
+            >
+              🤍
+            </button>
+          )}
         <p id="moveTips">{moves[value].tips}</p>
       </div>
     );

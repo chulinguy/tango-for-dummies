@@ -1,25 +1,9 @@
-@import "bootstrap-compass";
-@import "compass";
-@import "compass/css3";
-@import "bootstrap-variables";
-@import "bootstrap";
 @import "partials/variables";
 @import "partials/mixin";
 
 ::-webkit-scrollbar { 
   display: none; 
 }
-
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url(#{$icon-font-path}#{$icon-font-name}.ttf) format('truetype');
-  src: url(#{$icon-font-path}#{$icon-font-name}.eot?#iefix)
-  format('embedded-opentype'),
-  url(#{$icon-font-path}#{$icon-font-name}.woff) format('woff'),
-  url(#{$icon-font-path}#{$icon-font-name}.ttf) , format('truetype'),
-  url(#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id})
-  format('svg');
-  }
 
 body { 
   background-color: $dairy-cream
@@ -85,6 +69,14 @@ body {
   @media (max-width: $screenBreakPt) {
     height: 50vh;
     margin-top: 2vh;
+  }
+
+  button {
+    height: 30px;
+    width: 30px;
+    font-size: 0.75rem;
+    line-height: 1;
+    background: white;
   }
 }
 

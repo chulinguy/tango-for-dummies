@@ -10,7 +10,7 @@ class Flowchart extends React.Component {
     return (
       <div className="BS col-xs-12 col-sm-8" id="left">
         <div id="myDiagramDiv">
-          <img id="flowchart" alt="" src="./dist/images/Tango_for_dummies.jpg" useMap="#image-map" />
+          <img id="flowchart" alt="" src="/images/Tango_for_dummies.jpg" useMap="#image-map" />
           <map name="image-map">
             <ImageMapHover title="Weight Change" coords="409,1,643,48" number="1" />
             <ImageMapHover title="The Cross" coords="443,229,546,182" number="4" />
