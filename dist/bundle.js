@@ -33337,7 +33337,12 @@ var MoveText = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'text', className: 'BS col-xs-12' },
-        _react2.default.createElement('img', { id: 'move', alt: '', src: _moves2.default[value].url, className: 'img-responsive' }),
+        _react2.default.createElement('img', {
+          id: 'move',
+          alt: '',
+          src: _moves2.default[value].url,
+          className: 'img-responsive'
+        }),
         favMoves.includes(value) ? _react2.default.createElement(
           'button',
           {
@@ -33472,7 +33477,35 @@ function _interopRequireDefault(obj) {
 
 var middleware = (0, _redux.applyMiddleware)((0, _reduxLogger.createLogger)());
 
-exports.default = (0, _redux.createStore)(_reducers2.default, middleware);
+var saveToLocalStorage = function saveToLocalStorage(state) {
+  try {
+    var serializedState = JSON.stringify(state);
+    localStorage.setItem('state', serializedState);
+  } catch (err) {
+    console.error('Error saving state to local storage:', err);
+  }
+};
+
+var loadFromLocalStorage = function loadFromLocalStorage() {
+  try {
+    var serializedState = localStorage.getItem('state');
+    if (serializedState === null) return undefined;
+    return JSON.parse(serializedState);
+  } catch (err) {
+    console.error('Error loading state from local storage:', err);
+    return undefined;
+  }
+};
+
+var persistedState = loadFromLocalStorage();
+
+var store = (0, _redux.createStore)(_reducers2.default, persistedState, middleware);
+
+store.subscribe(function () {
+  saveToLocalStorage(store.getState());
+});
+
+exports.default = store;
 
 /***/ }),
 /* 81 */
